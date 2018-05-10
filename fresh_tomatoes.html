@@ -1,0 +1,103 @@
+
+<html>
+<head>
+    <title>MOVIE TRAILER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display:inline-block;
+            flex-wrap: wrap;
+            display: flex;
+            flex: 0%;
+            /*justify-content: center;*/
+            margin-top:50px;
+        }
+
+        body {
+            margin:20px;
+        }
+        
+       img{
+            height: 300px;
+            width: 300px;
+            border:2px solid #023131;
+            padding-left:50px;
+            padding-bottom:50px;
+            padding-right:50px;
+            padding-top:50px;
+          }
+   img:hover{
+            
+        
+            visibility: visible;
+            cursor: pointer;
+            border-radius:5%;
+            padding-left:50px;
+            padding-bottom:50px;
+            padding-right:50px;
+            padding-top:50px;
+            background-color:pink;
+          }
+
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myVideo").on("hidden.bs.modal", function () {
+                $("#myframeX").attr("src", "#");
+            })
+        })
+        function changeVideo(vId) {
+            var iframe = document.getElementById("myframeY");
+            iframe.src = "https://www.youtube.com/embed/" + vId;
+            $("#myVideo").modal("show");
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+           <div onclick="changeVideo('eHRrZ5DQCV4')">
+	
+		<img src = "http://i.ndtvimg.com/mt/movies/2013-04/asshiqui2-dramatic.jpg" alt = "AAshiqui2" width = "600px" height = "300px">
+	
+</div>
+<div onclick="changeVideo('KgsYJRnBNeE')" >
+	
+		<img src = "https://i.ytimg.com/vi/Vj9rmKuim3M/maxresdefault.jpg" alt = "AAshiqui" width = "600px" height = "300px">
+	</div>
+<div onclick="changeVideo('hZGR5Sj1Bfo')">
+	 <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTncJKHfE5Dkz7ZgEvYfHozAuLuSsSjCN2B8gB9M1Q7YwkCJs3wKg" alt = "chennaiexpress" width = "600px" height = "300px">
+	</a>
+        </div>
+        <div onclick="changeVideo('H1-_SBacAKU')">
+	<img src = "https://english.manoramaonline.com/content/dam/mm/en/entertainment/images/2016/May/29/premam-one-year.jpg.image.784.410.jpg" alt = "PREMAM" width = "600px" height = "300px">
+          </div>
+          <div onclick="changeVideo('qD-6d8Wo3do')">
+          <img src = "http://www.lovelytelugu.com/wp-content/uploads/2017/01/16298758_1322879227734849_6679850790624761842_n.jpg" alt =     "BAAHUBALI2" width = "600px" height = "300px">
+</div>	
+               
+            </div>  
+        </div>       
+        <div class="modal fade" id="myVideo" tabindex="-1" role="biography" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <iframe id="myframeY" width="550" height="350" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="close-button">
+                       <button type="button" style="background-color:red" class="btn btn-default" data-dismiss="modal">X</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
